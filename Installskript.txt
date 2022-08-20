@@ -1,0 +1,7 @@
+sudo apt update;
+sudo apt install python3-pip;
+pip install flask;
+sudo certbot --nginx -d webapp.stichels.de;
+export FLASK_APP=webApp;
+
+Certbot renew--
