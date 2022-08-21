@@ -23,7 +23,7 @@ Um eine webApp einzurichten, sind folgende Schritte zu absolvieren:
 * Mit folgendem Befehl ein SSL Zertifikat bei letsEncrypt beschaffen und den Reverse Proxy konfigurieren: \
   bash Infrastruktur-Einrichtung/subdomain.sh \
   Die Anweisungen befolgen, d.h. Subdomain eingeben, Port eingeben, Email-Adresse eingeben (Dummy-Adresse geht auch),Y,N
-* webApp starten, sie sollte über den Browser erreichbar sein.
+* webApp starten, sie sollte über den Browser erreichbar sein.\
 (Die mitgelieferte webApp verwendet den Port 5000 und wird mit dem Befehl "flask run" im Verzeichnis webApp gestartet.)
 
 ## Cheat Sheet - Befehle im Terminal
