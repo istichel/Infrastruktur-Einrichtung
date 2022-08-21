@@ -1,4 +1,4 @@
-#!/bin/bash  
+#!/bin/bash
 echo "Bitte die Hinweise im Git-Repository beachten!"
 sudo apt update;
 sudo apt upgrade;
