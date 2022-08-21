@@ -10,4 +10,7 @@ In diesem git-Repository findet ihr alles, was es für den Aufbau einer rudiment
 (Hinweis: SSH Zugriff auf externe Server ist innerhalb der Schule oft gesperrt. Eine Konsole kann man über das Verwaltungskonto des Hosting-Anbieters bekommen. So kann auch innerhalb der Schule der Server administriert werden.)
 
 ## Erstmaliges Einrichten des Servers
-
+Zunächst sollen auf dem Server rudimentäre Programme installiert werden und alle aktuellen updates eingespielt werden. Gehe dazu wie folgt vor:
+* Verbinde dich per SSH auf deinen Server
+* Gib folgenden Befehl ein und bestätige mit der Enter-Taste:
+  
