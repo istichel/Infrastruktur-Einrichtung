@@ -11,5 +11,5 @@ sudo apt install -y ruby;
 sudo apt install -y default-jdk;
 sudo apt install -y default-jre;
 sudo apt install -y python3-pip;
-sudo pip install flask;
+pip install flask;
 sudo shutdown -r now;
