@@ -23,5 +23,5 @@ Befehl                  | Erklärung
 ----------------------- | ----------------------- 
 ls                      | Zeigt alle Dateien im aktuellen Verzeichnis an.
 pwd                     | Zeigt das aktuelle Verzeichnis an.
-cd verzeichnisName      |  Wechselt in das angegebene Verzeichnis.
-
+cd verzeichnisName      | Wechselt in das angegebene Verzeichnis.
+exit                    | Trennt die Verbindung zum Server.
