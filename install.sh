@@ -6,7 +6,7 @@ sudo apt install -y git;
 sudo apt install -y nginx;
 sudo apt install -y python3;
 sudo apt install -y certbot;
-sudo apt install -y python-certbot-nginx;
+sudo apt install -y python3-certbot-nginx;
 sudo apt install -y ruby;
 sudo apt install -y default-jdk;
 sudo apt install -y default-jre;
