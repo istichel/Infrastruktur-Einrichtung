@@ -20,13 +20,13 @@ Zunächst sollen auf dem Server rudimentäre Programme installiert werden und al
 ## Einrichtung einer webApp
 Um eine webApp einzurichten, sind folgende Schritte zu absolvieren:
 * Subdomain anlegen (im Verwaltungsbereich des Hosting Anbieters)
-* In das Verzeichnis Infrastruktur-Einrichtung wechseln und mit folgendem Befehl ein SSL Zertifikat bei letsEncrypt beschaffen und den Reverse Proxy konfigurieren: \
-  bash subdomain.sh \
+* Mit folgendem Befehl ein SSL Zertifikat bei letsEncrypt beschaffen und den Reverse Proxy konfigurieren: \
+  bash Infrastruktur-Einrichtung/subdomain.sh \
   Die Anweisungen befolgen, d.h. Subdomain eingeben, Email-Adresse eingeben (Dummy-Adresse geht auch),Y,N
 * webApp starten, sie sollte über den Browser erreichbar sein.
 
 Beispiel:
-Die mitgelieferte webApp verwendet den Port 5000 und wird mit flask run im Verzeichnis webApp gestartet.
+Die mitgelieferte webApp verwendet den Port 5000 und wird mit dem Befehl "flask run" im Verzeichnis webApp gestartet.
 
 ## Cheat Sheet - Befehle im Terminal
 Befehl oder Tasten      | Erklärung 
