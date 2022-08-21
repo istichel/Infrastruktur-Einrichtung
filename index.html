@@ -17,36 +17,38 @@
     </tr>
     </table>
 </body>
+
 <script>
-	tabelleAktualisieren();
+	setInterval(() => {tabelleAktualisieren()}, 2000);
 
  	function tabelleAktualisieren(){
-	tabelle = document.getElementById("Tabelle");
- 	var anzahlZeilen = tabelle.rows.length;
-	for (var i = 1; i < anzahlZeilen; i++) {
-    	tabelle.deleteRow(1);
-	}
+		tabelle = document.getElementById("Tabelle");
+	 	var anzahlZeilen = tabelle.rows.length;
+		for (var i = 1; i < anzahlZeilen; i++) {
+	    	tabelle.deleteRow(1);
+		}
 
- 	fetch('https://webapp.stichels.de/api/getAll').then((response) => response.json()).then((data) => {
- 		for(let i = 0; i < data.length; i++) {
-    		var zeile = tabelle.insertRow(1);
- 			var spalte1 = zeile.insertCell(0)
-			var spalte2 = zeile.insertCell(1)
- 			var spalte3 = zeile.insertCell(2)
-			var spalte4 = zeile.insertCell(3)
-			spalte1.innerHTML = data[i][0]; 		
- 			spalte2.innerHTML = data[i][1];
- 			spalte3.innerHTML = data[i][2]; 		
- 			if(data[i][2]==0) 		
- 				spalte3.innerHTML = spalte3.innerHTML + '<button type="button" onclick="erledigen('+data[i][0]+')"> Erledigen </button>'
- 			spalte4.innerHTML = '<button type="button" onclick="loeschen('+data[i][0]+')"> Löschen </button>'
-		} 		
- 		});
+	 	fetch('https://webapp.stichels.de/api/getAll').then((response) => response.json()).then((data) => {
+	 		for(let i = 0; i < data.length; i++) {
+	    		var zeile = tabelle.insertRow(1);
+	 			var spalte1 = zeile.insertCell(0)
+				var spalte2 = zeile.insertCell(1)
+	 			var spalte3 = zeile.insertCell(2)
+				var spalte4 = zeile.insertCell(3)
+				spalte1.innerHTML = data[i][0]; 		
+	 			spalte2.innerHTML = data[i][1];
+	 			spalte3.innerHTML = data[i][2]; 		
+	 			if(data[i][2]==0) 		
+	 				spalte3.innerHTML = spalte3.innerHTML + '<button type="button" onclick="erledigen('+data[i][0]+')"> Erledigen </button>'
+	 			spalte4.innerHTML = '<button type="button" onclick="loeschen('+data[i][0]+')"> Löschen </button>'
+			} 		
+	 		});
  	}
+ 	
  	function erledigen(number){
  		const data = { Erledigt: 1, ID: number };
  		fetch('https://webapp.stichels.de/api/modify', {
-  		method: 'POST', // or 'PUT'
+  		method: 'POST',
   		headers: {'Content-Type': 'application/json',},
   		body: JSON.stringify(data),
 		}).then(tabelleAktualisieren());
@@ -55,7 +57,7 @@
  	function loeschen(number){
  		const data = { ID: number };
  		fetch('https://webapp.stichels.de/api/delete', {
-  		method: 'DELETE', // or 'PUT'
+  		method: 'DELETE',
   		headers: {'Content-Type': 'application/json',},
   		body: JSON.stringify(data),
 		}).then(tabelleAktualisieren());
@@ -63,9 +65,8 @@
 
  	function erstellen(){
  		const data = { Aufgabe: document.getElementById("Aufgabe").value };
- 		console.log(data)
  		fetch('https://webapp.stichels.de/api/create', {
-  		method: 'POST', // or 'PUT'
+  		method: 'POST', 
   		headers: {'Content-Type': 'application/json',},
   		body: JSON.stringify(data),
 		}).then(()=>{
