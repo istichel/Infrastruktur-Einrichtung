@@ -20,6 +20,10 @@ Zunächst sollen auf dem Server rudimentäre Programme installiert werden und al
 ## Einrichtung einer webApp
 Um eine webApp einzurichten, sind folgende Schritte zu absolvieren:
 * Subdomain anlegen (im Verwaltungsbereich des Hosting Anbieters)
+* Mit folgendem Befehl ein SSL Zertifikat bei letsEncrypt beschaffen: \
+  wget -O - https://raw.githubusercontent.com/istichel/Infrastruktur-Einrichtung/main/subdomain.sh | bash \
+  Die Anweisungen befolgen, d.h. Subdomain eingeben, Email-Adresse eingeben (Dummy-Adresse geht auch),Y,N
+
 
 ## Cheat Sheet - Befehle im Terminal
 Befehl                  | Erklärung 
