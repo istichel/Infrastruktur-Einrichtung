@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Bitte gib die Subdomnain ein, die du einrichten möchtest (z.B. testserver.stichels.de)."
 read -p "Subdomain: " subdomain;
-echo "Bitte gib den Port, auf dem dein Projekt laufen wird, ein (z.B. 8080)."
+echo "Bitte gib den Port, auf dem dein Projekt laufen wird, ein (z.B. 5000)."
 read -p "Port: " port;
 rm /etc/nginx/sites-enabled/$subdomain;
 echo "server {" >> /etc/nginx/sites-enabled/$subdomain;
