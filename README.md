@@ -14,3 +14,4 @@ Zunächst sollen auf dem Server rudimentäre Programme installiert werden und al
 * Verbinde dich per SSH auf deinen Server
 * Gib folgenden Befehl ein und bestätige mit der Enter-Taste:
   wget -O - https://raw.githubusercontent.com/istichel/Infrastruktur-Einrichtung/main/install.sh | bash
+  => Der Vorgang kann ein Wenig dauern. Nach dem Vorgang wird der Server neu gestartet.
