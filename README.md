@@ -19,6 +19,9 @@ Zunächst sollen auf dem Server rudimentäre Programme installiert werden und al
 
 
 ## Cheat Sheet - Befehle im Terminal
-* ls (Zeigt alle Dateien im aktuellen Verzeichnis an)
-* pwd (Zeigt das aktuelle Verzeichnis an)
-* cd verzeichnisName (wechselt in das angegebene Verzeichnis)
+Befehl                  | Erklärung 
+----------------------- | ----------------------- 
+ls                      | Zeigt alle Dateien im aktuellen Verzeichnis an.
+pwd                     | Zeigt das aktuelle Verzeichnis an.
+cd verzeichnisName      |  Wechselt in das angegebene Verzeichnis.
+
