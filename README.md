@@ -5,13 +5,26 @@ In diesem git-Repository findet ihr alles, was es für den Aufbau einer rudiment
 ## Voraussetzungen
 * SSH-Zugriff auf einen Ubuntu Server 22.04 LTS mit mind. 2 Cores, 2GB Arbeitsspeicher, 20GB Festplatte
 * Erreichbarkeit des Servers innerhalb und außerhalb der Schule (externes Hosting bei einem Hostinganbieter erleichtert den Zugriff) 
-* Zugriff auf das Verwaltungskonto des Hosting-Anbieters
+* Zugriff auf das Verwaltungsbereich des Hosting-Anbieters
 
-(Hinweis: SSH Zugriff auf externe Server ist innerhalb der Schule oft gesperrt. Eine Konsole kann man über das Verwaltungskonto des Hosting-Anbieters bekommen. So kann auch innerhalb der Schule der Server administriert werden.)
+(Hinweis: SSH Zugriff auf externe Server ist innerhalb der Schule oft gesperrt. Eine Konsole kann man über das Verwaltungsbereich des Hosting-Anbieters bekommen. So kann auch innerhalb der Schule der Server administriert werden.)
 
 ## Erstmaliges Einrichten des Servers
 Zunächst sollen auf dem Server rudimentäre Programme installiert werden und alle aktuellen updates eingespielt werden. Gehe dazu wie folgt vor:
-* Verbinde dich per SSH auf deinen Server
-* Gib folgenden Befehl ein und bestätige mit der Enter-Taste:
-  wget -O - https://raw.githubusercontent.com/istichel/Infrastruktur-Einrichtung/main/install.sh | bash
-  => Der Vorgang kann ein Wenig dauern. Nach dem Vorgang wird der Server neu gestartet.
+* Verbinde dich per SSH auf deinen Server (Beim Eingeben des Kennworts bewegt sich der Text-Kursor nicht. Das ist normal!)
+* Gib folgenden Befehl ein und bestätige mit der Enter-Taste:\
+  wget -O - https://raw.githubusercontent.com/istichel/Infrastruktur-Einrichtung/main/install.sh | bash\
+  => Der Vorgang kann ein Wenig dauern. Nach dem Vorgang wird der Server neu gestartet und man kann sich nach wenigen Minuten wieder per SSH verbinden.
+ * Nach der Installation sind im Verzeichnis Infrastruktur-Einrichtung weitere Dateien, die bei der weiteren Einrichtung helfen können.
+
+## Einrichtung einer webApp
+Um eine webApp einzurichten, sind folgende Schritte zu absolvieren:
+* Subdomain anlegen (im Verwaltungsbereich des Hosting Anbieters)
+
+## Cheat Sheet - Befehle im Terminal
+Befehl                  | Erklärung 
+----------------------- | ----------------------- 
+ls                      | Zeigt alle Dateien im aktuellen Verzeichnis an.
+pwd                     | Zeigt das aktuelle Verzeichnis an.
+cd verzeichnisName      | Wechselt in das angegebene Verzeichnis.
+exit                    | Trennt die Verbindung zum Server.
