@@ -29,9 +29,10 @@ Beispiel:
 Die mitgelieferte webApp verwendet den Port 5000 und wird mit flask run im Verzeichnis webApp gestartet.
 
 ## Cheat Sheet - Befehle im Terminal
-Befehl                  | Erklärung 
+Befehl oder Tasten      | Erklärung 
 ----------------------- | ----------------------- 
 ls                      | Zeigt alle Dateien im aktuellen Verzeichnis an.
 pwd                     | Zeigt das aktuelle Verzeichnis an.
 cd verzeichnisName      | Wechselt in das angegebene Verzeichnis.
 exit                    | Trennt die Verbindung zum Server.
+STRG+C                  | Beendet das aktuell laufende Programm
