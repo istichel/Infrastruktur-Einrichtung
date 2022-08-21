@@ -11,4 +11,5 @@ echo "proxy_pass      http://127.0.0.1:$port;" >> /etc/nginx/sites-enabled/$subd
 echo "}" >> /etc/nginx/sites-enabled/$subdomain;
 echo "}" >> /etc/nginx/sites-enabled/$subdomain;
 sudo certbot --nginx -d $subdomain;
-systemctl restart nginx;
+pkill nginx;
+systemctl start nginx;
