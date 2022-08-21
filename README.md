@@ -35,4 +35,4 @@ ls                      | Zeigt alle Dateien im aktuellen Verzeichnis an.
 pwd                     | Zeigt das aktuelle Verzeichnis an.
 cd verzeichnisName      | Wechselt in das angegebene Verzeichnis.
 exit                    | Trennt die Verbindung zum Server.
-STRG+C                  | Beendet das aktuell laufende Programm
+STRG+c                  | Beendet das aktuell laufende Programm
