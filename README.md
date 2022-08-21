@@ -13,4 +13,4 @@ In diesem git-Repository findet ihr alles, was es für den Aufbau einer rudiment
 Zunächst sollen auf dem Server rudimentäre Programme installiert werden und alle aktuellen updates eingespielt werden. Gehe dazu wie folgt vor:
 * Verbinde dich per SSH auf deinen Server
 * Gib folgenden Befehl ein und bestätige mit der Enter-Taste:
-  
+  wget -O - https://raw.githubusercontent.com/istichel/Infrastruktur-Einrichtung/main/install.sh | bash
