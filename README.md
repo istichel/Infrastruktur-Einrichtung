@@ -19,7 +19,7 @@ Zunächst sollen auf dem Server rudimentäre Programme installiert werden und al
 
 ## Einrichtung einer webApp
 Um eine webApp einzurichten, sind folgende Schritte zu absolvieren:
-* Subdomain anlegen (im Verwaltungsbereich des Hosting Anbieters)
+* Subdomain anlegen (im Verwaltungsbereich des Hosting Anbieters) und Verwendungsart prüfen (ggf. einstellen)
 * Mit folgendem Befehl ein SSL Zertifikat bei letsEncrypt beschaffen und den Reverse Proxy konfigurieren: \
   bash Infrastruktur-Einrichtung/subdomain.sh \
   Die Anweisungen befolgen, d.h. Subdomain eingeben, Port eingeben, Email-Adresse eingeben (Dummy-Adresse geht auch),Y,N
