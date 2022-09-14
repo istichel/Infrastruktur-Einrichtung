@@ -35,16 +35,16 @@ IONOS stellt die Domain automatisch richtig ein, wenn nur ein Server gebucht ist
 Dazu geht man wieder auf DOMAIN & SSL => klickt seine Subdomain an => Reiter Subdomains => sucht die neu erstellte Subdomain aus und klickt auf das Zahnrad => Verwendungsart anpassen => DNS
 Hier muss nun ein Eintrag mit dem Typ A und der IP Adresse des Servers sein. Sollte dieser fehlen => Record hinzufügen => A => IP Adresse des Servers hinterlegen => Speichern
 ### NGINX das neue Projekt mitteilen
-NGINX ist auf dem Server installiert und leitet Anfragen, die beim Server ankommen an die entsprechenden Programme weiter. Hat man also eine neue Subdomain erstellt, muss man NGINX sagen, was mit Anfragen auf diese Subdomain passieren soll. Dazu muss man wissen, auf welchem Port das Schülerprojekt läuft. Ist der Port bekannt, kann man mit dem Befehl: \
+NGINX ist auf dem Server installiert und leitet Anfragen, die beim Server ankommen an die entsprechenden Programme weiter. Hat man also eine neue Subdomain erstellt, muss man NGINX sagen, was mit Anfragen auf diese Subdomain passieren soll. Dazu muss man wissen, auf welchem Port das Schülerprojekt läuft. Ist der Port bekannt, kann man mit dem Befehl: 
 
-bash Infrastruktur-Einrichtung/subdomain.sh \
+bash Infrastruktur-Einrichtung/subdomain.sh 
 
 alle notwendigen einstellungen vornehmen.
 ### Schülerprojekt starten
 Ist die Subdomain eingestellt und NGINX konfiguriert muss das Schülerprojekt nur noch gestartet werden. Sobald das Projekt läuft, kann man direkt darauf zugreien. 
-Möchte man, dass das Schülerprojekt dauerhaft läuft, so kann man den startbefehl am Anfang um "nohup" und am Ende um "&" ergänzen. Der Befehl könnte dann z.B. so aussehen:\
+Möchte man, dass das Schülerprojekt dauerhaft läuft, so kann man den startbefehl am Anfang um "nohup" und am Ende um "&" ergänzen. Der Befehl könnte dann z.B. so aussehen:
 
-nohup ruby projekt.rb &\
+nohup ruby projekt.rb &
 
 Da man den Port des Projekts kennt, kann man ein dauerhaft laufendes Programm mit kill 'lsof -t -i:9001' beenden. Hierbei ist 9001 die Portnummer auf der das Projekt läuft.   
 ### Troubleshooting - auf ein Schülerprojekt kann nicht zugegriffen werden
