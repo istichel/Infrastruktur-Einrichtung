@@ -13,7 +13,7 @@ In diesem git-Repository findet ihr alles, was es für den Aufbau einer rudiment
 Zunächst sollen auf dem Server rudimentäre Programme installiert werden und alle aktuellen updates eingespielt werden. Gehe dazu wie folgt vor:
 * Verbinde dich per SSH auf deinen Server (Befehl: ssh root@IP-Adresse), anschließend mit "yes" bestätigen und das Kennwort eingeben. (Beim Eingeben des Kennworts bewegt sich der Text-Kursor nicht. Das ist normal!)
 * Gib folgenden Befehl ein und bestätige mit der Enter-Taste:\
-  wget -O - https://raw.githubusercontent.com/istichel/Infrastruktur-Einrichtung/main/install.sh | bash\
+       wget -O - https://raw.githubusercontent.com/istichel/Infrastruktur-Einrichtung/main/install.sh | bash\
   => Der Vorgang kann ein Wenig dauern. Nach dem Vorgang wird der Server neu gestartet und man kann sich nach wenigen Minuten wieder per SSH verbinden.
  * Nach der Installation sind im Verzeichnis Infrastruktur-Einrichtung weitere Dateien, die bei der weiteren Einrichtung helfen können.
 
@@ -36,12 +36,12 @@ Dazu geht man wieder auf DOMAIN & SSL => klickt seine Subdomain an => Reiter Sub
 Hier muss nun ein Eintrag mit dem Typ A und der IP Adresse des Servers sein. Sollte dieser fehlen => Record hinzufügen => A => IP Adresse des Servers hinterlegen => Speichern
 ### NGINX das neue Projekt mitteilen
 NGINX ist auf dem Server installiert und leitet Anfragen, die beim Server ankommen an die entsprechenden Programme weiter. Hat man also eine neue Subdomain erstellt, muss man NGINX sagen, was mit Anfragen auf diese Subdomain passieren soll. Dazu muss man wissen, auf welchem Port das Schülerprojekt läuft. Ist der Port bekannt, kann man mit dem Befehl: \
-bash Infrastruktur-Einrichtung/subdomain.sh \
+     bash Infrastruktur-Einrichtung/subdomain.sh \
 alle notwendigen einstellungen vornehmen.
 ### Schülerprojekt starten
 Ist die Subdomain eingestellt und NGINX konfiguriert muss das Schülerprojekt nur noch gestartet werden. Sobald das Projekt läuft, kann man direkt darauf zugreien. 
 Möchte man, dass das Schülerprojekt dauerhaft läuft, so kann man den startbefehl am Anfang um "nohup" und am Ende um "&" ergänzen. Der Befehl könnte dann z.B. so aussehen:\
-nohup ruby projekt.rb &
+     nohup ruby projekt.rb &
 Da man den Port des Projekts kennt, kann man ein dauerhaft laufendes Programm mit kill 'lsof -t -i:9001' beenden. Hierbei ist 9001 die Portnummer auf der das Projekt läuft.   
 ### Troubleshooting - auf ein Schülerprojekt kann nicht zugegriffen werden
 Hat man alles eingerichtet und das Projekt ist einfach nicht online sollte man wie folgt vorgehen:
