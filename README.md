@@ -31,8 +31,8 @@ Um eine webApp einzurichten, sind folgende Schritte zu absolvieren:
 Um ein Schülerprojekt online zu stellen, muss zunächst im Verwaltungsbereich des Hosting Anbieters eine Subdomain angelegt werden. \
 Bei IONOS klickt man dazu nach dem Login auf \
 DOMAIN & SSL => Subdomain erstellen (auf der rechten Seite unter Häufig genutzt Funktionen) => Subdomainnamen eingeben (z.B. projekt1) => speichern.\
-IONOS stellt die Domain automatisch richtig ein, wenn nur ein Server gebucht ist. Um sicher zu gehen, sollte man dennoch prüfen, ob die Domain eine Weiterleitung zum Server hat. Dazu geht man wieder auf DOMAIN & SSL \
-=> klickt seine Subdomain an => Reiter Subdomains => sucht die neu erstellte Subdomain aus und klickt auf das Zahnrad => Verwendungsart anpassen => DNS
+IONOS stellt die Domain automatisch richtig ein, wenn nur ein Server gebucht ist. Um sicher zu gehen, sollte man dennoch prüfen, ob die Domain eine Weiterleitung zum Server hat. \
+Dazu geht man wieder auf DOMAIN & SSL => klickt seine Subdomain an => Reiter Subdomains => sucht die neu erstellte Subdomain aus und klickt auf das Zahnrad => Verwendungsart anpassen => DNS
 Hier muss nun ein Eintrag mit dem Typ A und der IP Adresse des Servers sein. Sollte dieser fehlen => Record hinzufügen => A => IP Adresse des Servers hinterlegen => Speichern
 ### NGINX das neue Projekt mitteilen
 NGINX ist auf dem Server installiert und leitet Anfragen, die beim Server ankommen an die entsprechenden Programme weiter. Hat man also eine neue Subdomain erstellt, muss man NGINX sagen, was mit Anfragen auf diese Subdomain passieren soll. Dazu muss man wissen, auf welchem Port das Schülerprojekt läuft. Ist der Port bekannt, kann man mit dem Befehl: \
