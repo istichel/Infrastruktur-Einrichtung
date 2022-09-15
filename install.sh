@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Bitte die Hinweise im Git-Repository beachten!"
-sudo apt update;
-sudo apt upgrade;
+sudo apt update -y;
+sudo apt upgrade -y;
 sudo apt install -y git;
 sudo apt install -y nginx;
 sudo apt install -y python3;
