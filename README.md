@@ -40,11 +40,13 @@ Wichtiger Hinweis: Das erste Konto, das angelegt wird, ist auch gleichzeitig das
 
 Nach dem Anlegen des Admin Kontos, sollte man noch einen Email-Versand einrichten, damit vergessene Kennwörter selbstständig zurückgesetzt werden können.
 Dazu benötigt man einen Email-Dienst und folgende Infos: SMTP Server, SMTP Port, Nutzername, Email
+Diese erhält man in der Regel durch einfaches googeln (z.B. für IONOS: https://www.ionos.de/hilfe/e-mail/allgemeine-themen/serverinformationen-fuer-imap-pop-und-smtp/)
 
 Mit folgendem Befehl kann man den Email-Dienst für gitea hinterlegen:
 
 cd; bash Infrastruktur-Einrichtung/setgiteaemail.sh
 
+Dabei muss man die oben genannten Infos eingeben.
 
 ## Einrichtung mysql und phpmyadmin
 
