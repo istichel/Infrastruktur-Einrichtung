@@ -14,5 +14,8 @@ chmod 770 /etc/gitea
 export GITEA_WORK_DIR=/var/lib/gitea/
 cp gitea /usr/local/bin/gitea
 cp /root/Infrastruktur-Einrichtung/gitea.service /etc/systemd/system/gitea.service 
-
+sed s/8080/999/g /etc/gitea/app.ini
+sudo chmod 777 /etc/gitea/app.ini;
+sudo systemctl enable gitea;
+sudo systemctl start gitea;
 
