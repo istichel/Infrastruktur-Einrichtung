@@ -31,4 +31,5 @@ sed -i s/GITEADOMAIN/$subdomain/g /etc/gitea/app.ini
 sudo chmod 777 /etc/gitea/app.ini;
 sudo systemctl enable gitea;
 sudo systemctl start gitea;
-
+systemctl stop nginx;
+systemctl start nginx;
