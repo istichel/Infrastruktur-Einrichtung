@@ -12,4 +12,7 @@ sudo certbot --nginx -d $subdomain;
 pkill nginx;
 systemctl start nginx;
 sudo apt -y update;
+sudo apt -y install apache2 mysql-server;
+sudo mysql_secure_installation;
+sudo apt -y install php libapache2-mod-php php-mysql;
 sudo apt -y install phpmyadmin php-mbstring php-zip php-gd php-json php-curl;
