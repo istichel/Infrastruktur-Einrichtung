@@ -12,4 +12,5 @@ echo "}" >> /etc/nginx/sites-enabled/$subdomain;
 echo "}" >> /etc/nginx/sites-enabled/$subdomain;
 sudo certbot --nginx -d $subdomain;
 pkill nginx;
+systemctl stop nginx;
 systemctl start nginx;
