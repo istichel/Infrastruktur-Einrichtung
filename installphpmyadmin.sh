@@ -9,7 +9,7 @@ echo "proxy_pass      http://localhost:81/phpmyadmin;" >> /etc/nginx/sites-enabl
 echo "proxy_set_header X-Forwarded-Proto https;" >> /etc/nginx/sites-enabled/$subdomain;
 echo "}" >> /etc/nginx/sites-enabled/$subdomain;
 echo "location / {" >> /etc/nginx/sites-enabled/$subdomain;
-echo "return 301 https://$subdomain;" >> /etc/nginx/sites-enabled/$subdomain;
+echo "return 301 https://$subdomain/phpmyadmin;" >> /etc/nginx/sites-enabled/$subdomain;
 echo "}" >> /etc/nginx/sites-enabled/$subdomain;
 echo "}" >> /etc/nginx/sites-enabled/$subdomain;
 sudo certbot --nginx -d $subdomain;
