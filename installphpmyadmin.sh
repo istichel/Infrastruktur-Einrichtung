@@ -17,5 +17,7 @@ sudo apt -y update;
 sudo apt -y install apache2 mysql-server;
 mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$password';"
 sudo mysql_secure_installation;
+sed -i s/80/81/g /etc/apache2/ports.conf;
+sed -i s/443/444/g /etc/apache2/ports.conf;
 sudo apt -y install php libapache2-mod-php php-mysql;
 sudo apt -y install phpmyadmin php-mbstring php-zip php-gd php-json php-curl;
