@@ -1,8 +1,6 @@
 #!/bin/bash
 echo "Bitte gib die Subdomnain für phpmyadmin ein."
 read -p "Subdomain: " subdomain;
-echo "Bitte gib das Kennwort für mysql ein."
-read -p "Kennwort: " password;
 rm /etc/nginx/sites-enabled/$subdomain;
 echo "server {" >> /etc/nginx/sites-enabled/$subdomain;
 echo "server_name $subdomain;" >> /etc/nginx/sites-enabled/$subdomain;
@@ -15,6 +13,8 @@ pkill nginx;
 systemctl start nginx;
 sudo apt -y update;
 sudo apt -y install apache2 mysql-server;
+echo "Bitte gib das Kennwort für mysql ein - dieses muss gleich noch einmal eingegeben werden!"
+read -p "Kennwort: " password;
 mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$password';"
 sudo mysql_secure_installation;
 sed -i s/80/81/g /etc/apache2/ports.conf;
