@@ -25,8 +25,9 @@ chown root:git /etc/gitea
 chmod 770 /etc/gitea
 export GITEA_WORK_DIR=/var/lib/gitea/
 cp gitea /usr/local/bin/gitea
-cp /root/Infrastruktur-Einrichtung/gitea.service /etc/systemd/system/gitea.service 
-sed s/8080/999/g /etc/gitea/app.ini
+cp /root/Infrastruktur-Einrichtung/gitea/gitea.service /etc/systemd/system/gitea.service
+cp /root/Infrastruktur-Einrichtung/gitea/app.ini /etc/gitea/ 
+sed s/GITEADOMAIN/$subdomain/g /etc/gitea/app.ini
 sudo chmod 777 /etc/gitea/app.ini;
 sudo systemctl enable gitea;
 sudo systemctl start gitea;
