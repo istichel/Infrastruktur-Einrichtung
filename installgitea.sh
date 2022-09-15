@@ -13,4 +13,6 @@ chown root:git /etc/gitea
 chmod 770 /etc/gitea
 export GITEA_WORK_DIR=/var/lib/gitea/
 cp gitea /usr/local/bin/gitea
+cp /root/Infrastruktur-Einrichtung/gitea.service /etc/systemd/system/gitea.service 
+
 
