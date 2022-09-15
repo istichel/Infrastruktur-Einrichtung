@@ -18,7 +18,7 @@ Zunächst sollen auf dem Server rudimentäre Programme installiert werden und al
  * Nach der Installation sind im Verzeichnis Infrastruktur-Einrichtung weitere Dateien, die bei der weiteren Einrichtung helfen können.
 
 ## Einrichtung gitea
-Da gitea auf Port 3000 muss dieser zunächst freigemacht werden. Anschließend muss (falls noch nicht geschehen) die erstmalige Einrichtung des Servers durchgeführt werden.
+Da gitea auf Port 3000 muss dieser zunächst freigemacht werden. Anschließend muss (falls noch nicht geschehen) die erstmalige Einrichtung des Servers durchgeführt werden.\
 Schließlich wird gitea nach dem Login per SSH durch den folgenden Befehl:\
 bash Infrastruktur-Einrichtung/installgit.sh
 
