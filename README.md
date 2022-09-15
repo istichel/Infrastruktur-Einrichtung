@@ -50,7 +50,8 @@ Dabei muss man die oben genannten Infos eingeben. Die Email-Konfiguration sollte
 Wenn alles richtig eingestellt ist, kommt die Testmail an. Ansonsten kann man die Email-Konfiguration ohne Weiteres neu probieren.
 
 ## Einrichtung mysql und phpmyadmin
-
+APACHE auswählen (space,TAB,Enter)
+OK, OK, AdminPasswort
 
 ## Einrichtung einer webApp
 Um eine webApp einzurichten, sind folgende Schritte zu absolvieren:
