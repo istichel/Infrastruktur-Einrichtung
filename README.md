@@ -18,12 +18,27 @@ Zunächst sollen auf dem Server rudimentäre Programme installiert werden und al
  * Nach der Installation sind im Verzeichnis Infrastruktur-Einrichtung weitere Dateien, die bei der weiteren Einrichtung helfen können.
 
 ## Einrichtung gitea
-Da gitea auf Port 3000 muss dieser zunächst freigemacht werden. Anschließend muss (falls noch nicht geschehen) die erstmalige Einrichtung des Servers durchgeführt werden.\
-Schließlich wird gitea nach dem Login per SSH durch den folgenden Befehl:
+Voraussetzungen:
+* Port 3000 darf noch nicht in Benutzung sein.
+* Subdomain für gitea muss im Verwaltungsbereich des Hostinganbieters eingerichtet sein
+* erstmalige Einrichtung des Servers ist abgeschlossen
+Sind die Voraussetzungen erfüllt, loggt man sich per SSH ein und installiert gitea mit dem Befehl
 
-bash Infrastruktur-Einrichtung/installgitea.sh
+cd; bash Infrastruktur-Einrichtung/installgitea.sh
 
+Zunächst wird man aufgefordert die Domain für gitea eingerichtete Domain einzugeben. Das ist notwendig, damit das SSL Zertifikat und NGINX direkt richtig eingestellt werden können.
 
+Nach der Installation kann mit dem Befehl
+
+systemctl status gitea
+
+geprüft werden, ob gitea läuft.
+
+Schließlich öffnet man einen Browser und ruft gitea auf. (z.B.: https://gitea.meinedomain.de) => Registrieren => Konto anlegen. 
+Wichtiger Hinweis: Das erste Konto, das angelegt wird, ist auch gleichzeitig das Admin Konto.
+
+Nach dem Anlegen des Admin Kontos, sollte man noch einen Email-Versand einrichten, damit vergessene Kennwörter einfach zurückgesetzt werden können.
+=> man klickt ganz oben rechts auf den Avatar => Administration => 
 
 ## Einrichtung mysql und phpmyadmin
 
