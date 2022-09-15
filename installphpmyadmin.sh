@@ -1,6 +1,8 @@
 #!/bin/bash
-echo "Bitte gib die Subdomnain für gitea ein."
+echo "Bitte gib die Subdomnain für phpmyadmin ein."
 read -p "Subdomain: " subdomain;
+echo "Bitte gib das Kennwort für mysql ein."
+read -p "Kennwort: " password;
 rm /etc/nginx/sites-enabled/$subdomain;
 echo "server {" >> /etc/nginx/sites-enabled/$subdomain;
 echo "server_name $subdomain;" >> /etc/nginx/sites-enabled/$subdomain;
@@ -13,7 +15,7 @@ pkill nginx;
 systemctl start nginx;
 sudo apt -y update;
 sudo apt -y install apache2 mysql-server;
-mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'SetRootPasswordHere';"
+mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$password';"
 sudo mysql_secure_installation;
 sudo apt -y install php libapache2-mod-php php-mysql;
 sudo apt -y install phpmyadmin php-mbstring php-zip php-gd php-json php-curl;
