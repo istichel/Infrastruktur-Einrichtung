@@ -22,6 +22,7 @@ Voraussetzungen:
 * Port 3000 darf noch nicht in Benutzung sein.
 * Subdomain für gitea muss im Verwaltungsbereich des Hostinganbieters eingerichtet sein
 * erstmalige Einrichtung des Servers ist abgeschlossen
+* Zugriff auf einen Email-Dienst, der mit gitea verbunden wird (optional)
 Sind die Voraussetzungen erfüllt, loggt man sich per SSH ein und installiert gitea mit dem Befehl
 
 cd; bash Infrastruktur-Einrichtung/installgitea.sh
@@ -37,8 +38,13 @@ geprüft werden, ob gitea läuft.
 Schließlich öffnet man einen Browser und ruft gitea auf. (z.B.: https://gitea.meinedomain.de) => Registrieren => Konto anlegen. 
 Wichtiger Hinweis: Das erste Konto, das angelegt wird, ist auch gleichzeitig das Admin Konto.
 
-Nach dem Anlegen des Admin Kontos, sollte man noch einen Email-Versand einrichten, damit vergessene Kennwörter einfach zurückgesetzt werden können.
-=> man klickt ganz oben rechts auf den Avatar => Administration => 
+Nach dem Anlegen des Admin Kontos, sollte man noch einen Email-Versand einrichten, damit vergessene Kennwörter selbstständig zurückgesetzt werden können.
+Dazu benötigt man einen Email-Dienst und folgende Infos: SMTP Server, SMTP Port, Nutzername, Email
+
+Mit folgendem Befehl kann man den Email-Dienst für gitea hinterlegen:
+
+cd; bash Infrastruktur-Einrichtung/setgiteaemail.sh
+
 
 ## Einrichtung mysql und phpmyadmin
 
