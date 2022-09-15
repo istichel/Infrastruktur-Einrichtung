@@ -46,7 +46,8 @@ Mit folgendem Befehl kann man den Email-Dienst für gitea hinterlegen:
 
 cd; bash Infrastruktur-Einrichtung/setgiteaemail.sh
 
-Dabei muss man die oben genannten Infos eingeben.
+Dabei muss man die oben genannten Infos eingeben. Die Email-Konfiguration sollte man testen, dazu loggt man sich mit dem Admin-Account bei gitea ein => klickt oben rechts auf den Avatar => Administration => Reiter Konfiguration => nach untenscrollen und eine Testmail verschicken. 
+Wenn alles richtig eingestellt ist, kommt die Testmail an. Ansonsten kann man die Email-Konfiguration ohne Weiteres neu probieren.
 
 ## Einrichtung mysql und phpmyadmin
 
