@@ -12,5 +12,8 @@ echo "Bitte gib das Passwort für den SMTP Zugang ein:"
 read -p "Passwort: " passwort;
 sed -i s/meinPasswort/$passwort/g /etc/gitea/app.ini
 sed -i s/#PASSWD/PASSWD/g /etc/gitea/app.ini
+sed -i s/#HOST/HOST/g /etc/gitea/app.ini
+sed -i s/#FROM/FROM/g /etc/gitea/app.ini
+sed -i s/#USER/USER/g /etc/gitea/app.ini
 systemctl stop gitea;
 systemctl start gitea;
