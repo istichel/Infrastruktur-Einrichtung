@@ -18,7 +18,7 @@ Zunächst sollen auf dem Server rudimentäre Programme installiert werden und al
  * Nach der Installation sind im Verzeichnis Infrastruktur-Einrichtung weitere Dateien, die bei der weiteren Einrichtung helfen können.
 
 ## Einrichtung gitea
-
+gitea läuft auf Port 3000 - der Port muss also frei gemacht werden.
 
 ## Einrichtung mysql und phpmyadmin
 
