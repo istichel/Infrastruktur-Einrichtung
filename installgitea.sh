@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 echo "Bitte gib die Subdomnain für gitea ein."
 read -p "Subdomain: " subdomain;
 rm /etc/nginx/sites-enabled/$subdomain;
