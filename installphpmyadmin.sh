@@ -28,6 +28,7 @@ sed -i s/'#ServerName www.example.com'/'ServerName $subdomain'/g /etc/apache2/si
 sed -i s/80/81/g /etc/apache2/sites-enabled/000-default.conf;
 sudo apt -y install php libapache2-mod-php php-mysql;
 sudo apt -y install phpmyadmin php-mbstring php-zip php-gd php-json php-curl;
+sed -i s/"Alias \/phpmyadmin"/"Alias \/mysql"/g /etc/apache2/conf-enabled/phpmyadmin.conf;
 systemctl stop apache2;
 systemctl start apache2;
 
