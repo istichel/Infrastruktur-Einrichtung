@@ -50,11 +50,35 @@ Dabei muss man die oben genannten Infos eingeben. Die Email-Konfiguration sollte
 Wenn alles richtig eingestellt ist, kommt die Testmail an. Ansonsten kann man die Email-Konfiguration ohne Weiteres neu probieren.
 
 ## Einrichtung mysql und phpmyadmin
-Subdomain eingeben => warten => Kennwort wählen => Kennwort noch einmal eingeben => n (Validate Password Component) => n (Change the passwort for root) => y (Remove anonymous users) => y (disallow root login remotely) => y (remove test database and access to it) => y (Reload privilege tables nows)
-apache2 auswählen (mit der Leertaste, es muss ein Stern bei apache2 auftauchen => Tab Taste drücken um auf den OK Button zu kommen => Enter drücken zum Bestätigen
-=> yes (Configure database for phpmyadmin with dbconfig-common) => nichts eingeben, einfach mit Enter bestätigen (MySQL Application Password for phpmyadmin) 
-Prüfen, ob nginx läuft: systemctl status nginx (es muss in grün "running" stehen -> Ansonsten nginx neu starten (siehe Cheat Sheet)
-Prüfen, ob apache2 läuft: systemctl status apache2 (es muss in grün "running" stehen -> Ansonsten apache2 neu starten (siehe Cheat Sheet)
+Die Einrichtung von phpmyadmin ist etwas komplizierter - aber auch kein Hexenwerk. 
+Voraussetzungen:
+* Port 81 und 444 darf noch nicht in Benutzung sein.
+* Subdomain für phpmyadmin muss im Verwaltungsbereich des Hostinganbieters eingerichtet sein
+* erstmalige Einrichtung des Servers ist abgeschlossen
+Sind die Voraussetzungen erfüllt, loggt man sich per SSH ein und installiert mysql und phpmyadmin mit dem Befehl
+
+cd; bash Infrastruktur-Einrichtung/installphpmyadmin.sh
+
+Während der Installation wird man immer wieder aufgefordert verschiedene Sachen einzugeben:
+* Am Anfang: Subdomain eingeben 
+* Root Kennwort für mysql wählen (und unbedingt notieren) 
+* Root Kennwort für mysql noch einmal eingeben 
+* no (Validate Password Component) 
+* no (Change the passwort for root) 
+* y (Remove anonymous users) 
+* y (disallow root login remotely) 
+* y (remove test database and access to it) 
+* y (Reload privilege tables nows)
+* im auftauchenden farbenfrohen Fenster apache2 auswählen (mit der Leertaste, es muss ein Stern bei apache2 auftauchen => Tab Taste drücken um auf den OK Button zu kommen => Enter drücken zum Bestätigen
+* im neuen farbenfrohen Fenster: yes (Configure database for phpmyadmin with dbconfig-common) 
+* nichts eingeben und einfach mit Enter bestätigen (MySQL Application Password for phpmyadmin)
+
+Nach der Installation lohnt es sich zu prüfen ob nginx und apache2 laufen => man gibt ein:
+
+systemctl status nginx (es muss in grün "running" stehen -> Ansonsten nginx neu starten (siehe Cheat Sheet)
+systemctl status apache2 (es muss in grün "running" stehen -> Ansonsten apache2 neu starten (siehe Cheat Sheet)
+
+Ist die Installation durchgelaufen, kann man unter der angegeben Domain phpmyAdmin aufrufen und sich mit den Benutzerdaten root und dem mysql root Kennwort einloggen. Es empfiehlt sich zunächst ein paar Benutzer zu erstellen, so dass die Schülerinnen und Schüler nicht mit dem root Nutzer arbeiten. => Fortbildung Basiswissen Datenbanken (INF0086)
 
 ## Einrichtung einer webApp
 Um eine webApp einzurichten, sind folgende Schritte zu absolvieren:
