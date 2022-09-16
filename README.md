@@ -50,9 +50,11 @@ Dabei muss man die oben genannten Infos eingeben. Die Email-Konfiguration sollte
 Wenn alles richtig eingestellt ist, kommt die Testmail an. Ansonsten kann man die Email-Konfiguration ohne Weiteres neu probieren.
 
 ## Einrichtung mysql und phpmyadmin
-Subdomain eingeben => warten => Kennwort wählen => Kennwort noch einmal eingeben => n => n => y => y => y => y
-apache2 auswählen (mit der Leertaste, es muss ein Stern auftauchen => Tab Taste => Enter drücken
-=> yes (mit Enter bestätigen) => Enter (Kennwort muss nicht gewählt werden) 
+Subdomain eingeben => warten => Kennwort wählen => Kennwort noch einmal eingeben => n (Validate Password Component) => n (Change the passwort for root) => y (Remove anonymous users) => y (disallow root login remotely) => y (remove test database and access to it) => y (Reload privilege tables nows)
+apache2 auswählen (mit der Leertaste, es muss ein Stern bei apache2 auftauchen => Tab Taste drücken um auf den OK Button zu kommen => Enter drücken zum Bestätigen
+=> yes (Configure database for phpmyadmin with dbconfig-common) => nichts eingeben, einfach mit Enter bestätigen (MySQL Application Password for phpmyadmin) 
+Prüfen, ob nginx läuft: systemctl status nginx (es muss in grün "running" stehen -> Ansonsten nginx neu starten (siehe Cheat Sheet)
+Prüfen, ob apache2 läuft: systemctl status apache2 (es muss in grün "running" stehen -> Ansonsten apache2 neu starten (siehe Cheat Sheet)
 
 ## Einrichtung einer webApp
 Um eine webApp einzurichten, sind folgende Schritte zu absolvieren:
@@ -103,4 +105,6 @@ kill 'lsof -t -i:9001'       | Beendet den Prozess an Port 9001
 systemctl status nginx       | gibt den Status von NGINX an. NGINX läuft richtig, wenn der Status "running" ist.
 systemctl stop nginx         | Beendet NGINX.
 systemctl start nginx        | Startet NGINX.
-systemctl reload nginx       | Startet NGINX neu.
+systemctl reload nginx       | Startet NGINX.
+systemctl start apache2      | Startet apache2.
+
