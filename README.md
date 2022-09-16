@@ -59,7 +59,7 @@ Sind die Voraussetzungen erfüllt, loggt man sich per SSH ein und installiert my
 
 cd; bash Infrastruktur-Einrichtung/installphpmyadmin.sh
 
-Während der Installation wird man immer wieder aufgefordert verschiedene Sachen einzugeben:
+Während der Installation wird man immer wieder aufgefordert, verschiedene Sachen einzugeben:
 * Am Anfang: Subdomain eingeben 
 * Root Kennwort für mysql wählen (und unbedingt notieren) 
 * Root Kennwort für mysql noch einmal eingeben 
