@@ -1,6 +1,8 @@
 #!/bin/bash
 echo "Bitte die Hinweise im Git-Repository beachten!"
 sudo apt update -y;
+sudo apt install -y needrestart;
+
 sudo apt upgrade -y;
 sudo apt install -y git;
 sudo apt install -y nginx;
