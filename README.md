@@ -29,6 +29,11 @@ cd; bash Infrastruktur-Einrichtung/installgitea.sh
 
 Zunächst wird man aufgefordert die Domain für gitea eingerichtete Domain einzugeben. Das ist notwendig, damit das SSL Zertifikat und NGINX direkt richtig eingestellt werden können.
 
+Falls man zum ersten Mal eine Subdomain anlegt, beantwortet man die folgenden Fragen wie folgt:
+* Email-Adresse eingeben (falls man zum ersten mal eine Subdomain anlegt)
+* Y (Nutzungsbedingungen letsencrypt)
+* N (Newsletter letsencrypt)
+
 Nach der Installation kann mit dem Befehl
 
 systemctl status gitea
@@ -60,7 +65,10 @@ Sind die Voraussetzungen erfüllt, loggt man sich per SSH ein und installiert my
 cd; bash Infrastruktur-Einrichtung/installphpmyadmin.sh
 
 Während der Installation wird man immer wieder aufgefordert, verschiedene Sachen einzugeben:
-* Am Anfang: Subdomain eingeben 
+* Subdomain eingeben 
+* Email-Adresse eingeben (falls man zum ersten mal eine Subdomain anlegt)
+* Y (Nutzungsbedingungen letsencrypt) (falls man zum ersten mal eine Subdomain anlegt)
+* N (Newsletter letsencrypt) (falls man zum ersten mal eine Subdomain anlegt)
 * Root Kennwort für mysql wählen (und unbedingt notieren) 
 * Root Kennwort für mysql noch einmal eingeben 
 * no (Validate Password Component) 
