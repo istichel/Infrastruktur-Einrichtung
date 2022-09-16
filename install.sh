@@ -2,7 +2,7 @@
 echo "Bitte die Hinweise im Git-Repository beachten!"
 sudo apt update -y;
 sudo apt install -y needrestart;
-
+sed -i s/"#$nrconf{restart} = 'i'";/"#$nrconf{restart} = 'a';"/g /etc/needrestart/needrestart.conf;
 sudo apt upgrade -y;
 sudo apt install -y git;
 sudo apt install -y nginx;
