@@ -63,7 +63,7 @@ Voraussetzungen:
 * erstmalige Einrichtung des Servers ist abgeschlossen
 Sind die Voraussetzungen erfüllt, loggt man sich per SSH ein und installiert mysql und phpmyadmin mit dem Befehl
 
-cd; bash Infrastruktur-Einrichtung/installphpmyadmin.sh
+cd; cd Infrastruktur-Einrichtung; git pull; cd; bash Infrastruktur-Einrichtung/installphpmyadmin.sh
 
 Während der Installation wird man immer wieder aufgefordert, verschiedene Sachen einzugeben:
 * Subdomain eingeben 
