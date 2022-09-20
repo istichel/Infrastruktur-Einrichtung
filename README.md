@@ -23,6 +23,7 @@ Voraussetzungen:
 * Subdomain für gitea muss im Verwaltungsbereich des Hostinganbieters eingerichtet sein
 * erstmalige Einrichtung des Servers ist abgeschlossen
 * Zugriff auf einen Email-Dienst, der mit gitea verbunden wird (optional)
+
 Sind die Voraussetzungen erfüllt, loggt man sich per SSH ein und installiert gitea mit dem Befehl
 
 cd; bash Infrastruktur-Einrichtung/installgitea.sh
