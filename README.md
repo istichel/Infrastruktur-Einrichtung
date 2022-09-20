@@ -66,7 +66,7 @@ Sind die Voraussetzungen erfüllt, loggt man sich per SSH ein und installiert my
 cd; cd Infrastruktur-Einrichtung; git pull; cd; bash Infrastruktur-Einrichtung/installphpmyadmin.sh
 
 Während der Installation wird man immer wieder aufgefordert, verschiedene Sachen einzugeben:
-* Subdomain eingeben 
+* Subdomain eingeben (falls man gefragt wird, dann die option "Redirect" auswählen)
 * Email-Adresse eingeben (falls man zum ersten mal eine Subdomain anlegt)
 * Y (Nutzungsbedingungen letsencrypt) (falls man zum ersten mal eine Subdomain anlegt)
 * N (Newsletter letsencrypt) (falls man zum ersten mal eine Subdomain anlegt)
