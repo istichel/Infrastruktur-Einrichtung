@@ -18,8 +18,8 @@ sudo apt install -y net-tools;
 sudo apt install -y docker.io;
 pip install flask;
 git clone https://github.com/istichel/Infrastruktur-Einrichtung.git;
-sudo crontab -l > mycron
-echo "00 03 * * 0 certbot renew" >> mycron
-sudo crontab mycron
-rm mycron
+sudo crontab -l > mycron;
+echo "00 03 * * 0 certbot renew" >> mycron;
+sudo crontab mycron;
+rm mycron;
 sudo shutdown -r now;
