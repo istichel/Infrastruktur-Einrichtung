@@ -16,6 +16,7 @@ sudo apt install -y default-jre;
 sudo apt install -y python3-pip;
 sudo apt install -y net-tools;
 sudo apt install -y docker.io;
+sudo apt install -y nodejs;
 pip install flask;
 git clone https://github.com/istichel/Infrastruktur-Einrichtung.git;
 sudo crontab -l > mycron;
