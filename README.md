@@ -79,7 +79,7 @@ Während der Installation wird man immer wieder aufgefordert, verschiedene Sache
 * y (disallow root login remotely) 
 * y (remove test database and access to it) 
 * y (Reload privilege tables nows)
-* im auftauchenden farbenfrohen Fenster apache2 auswählen (mit der Leertaste, es muss ein Stern bei apache2 auftauchen => Tab Taste drücken um auf den OK Button zu kommen => Enter drücken zum Bestätigen
+* im auftauchenden farbenfrohen Fenster apache2 auswählen (mit der Leertaste, es muss ein Stern bei apache2 auftauchen => Tab Taste drücken um auf den OK Button zu kommen => Enter drücken zum Bestätigen)
 * im neuen farbenfrohen Fenster: yes (Configure database for phpmyadmin with dbconfig-common) 
 * nichts eingeben und einfach mit Enter bestätigen (MySQL Application Password for phpmyadmin)
 
