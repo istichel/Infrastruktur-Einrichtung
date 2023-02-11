@@ -39,10 +39,11 @@ Nach der Installation kann mit dem Befehl
 
 systemctl status gitea
 
-geprüft werden, ob gitea läuft.
+geprüft werden, ob gitea läuft. Aus der Ansicht kommt man durch Drücken der Taste "q" wieder raus.
 
 Schließlich öffnet man einen Browser und ruft gitea auf. (z.B.: https://gitea.meinedomain.de) => Registrieren => Konto anlegen. 
-Wichtiger Hinweis: Das erste Konto, das angelegt wird, ist auch gleichzeitig das Admin Konto.
+Wichtiger Hinweis: Das erste Konto, das angelegt wird, ist auch gleichzeitig das Admin Konto. 
+Wichtiger Hinweis: Der Benutzername "admin" ist für interne Zwecke reserviert und darf (auch für das erste Konto) nicht verwendet werden. Ich empfehle euer Kürzel zu verwenden.
 
 Nach dem Anlegen des Admin Kontos, sollte man noch einen Email-Versand einrichten, damit vergessene Kennwörter selbstständig zurückgesetzt werden können.
 Dazu benötigt man einen Email-Dienst und folgende Infos: SMTP Server, SMTP Port, Nutzername, Email
