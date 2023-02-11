@@ -1,0 +1,79 @@
+<html lang="de">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>To-Do Liste</title>
+</head>
+<body>
+	<h1>Meine eigene To-Do Liste</h1>
+	<h2>Aufgabe erstellen</h2>
+	<label for="Aufgabe">Aufgabe: </label><input type="text" maxlength="512" id="Aufgabe"><input type="button" value="Speichern" onclick="erstellen()">
+	<p>
+	<table id="Tabelle">
+  	<tr>
+  		<th>ID</th>
+	    <th>Aufgabe</th>
+    	<th>Erledigt</th>
+    	<th></th>
+    </tr>
+    </table>
+</body>
+
+<script>
+	setInterval(() => {tabelleAktualisieren()}, 2000);
+
+ 	function tabelleAktualisieren(){
+		tabelle = document.getElementById("Tabelle");
+	 	var anzahlZeilen = tabelle.rows.length;
+		for (var i = 1; i < anzahlZeilen; i++) {
+	    	tabelle.deleteRow(1);
+		}
+
+	 	fetch('http://127.0.0.1:5000/api/getAll').then((response) => response.json()).then((data) => {
+	 		for(let i = 0; i < data.length; i++) {
+	    		var zeile = tabelle.insertRow(1);
+	 			var spalte1 = zeile.insertCell(0)
+				var spalte2 = zeile.insertCell(1)
+	 			var spalte3 = zeile.insertCell(2)
+				var spalte4 = zeile.insertCell(3)
+				spalte1.innerHTML = data[i][0]; 		
+	 			spalte2.innerHTML = data[i][1];
+	 			spalte3.innerHTML = data[i][2]; 		
+	 			if(data[i][2]==0) 		
+	 				spalte3.innerHTML = spalte3.innerHTML + '<button type="button" onclick="erledigen('+data[i][0]+')"> Erledigen </button>'
+	 			spalte4.innerHTML = '<button type="button" onclick="loeschen('+data[i][0]+')"> Löschen </button>'
+			} 		
+	 		});
+ 	}
+ 	
+ 	function erledigen(number){
+ 		const data = { Erledigt: 1, ID: number };
+ 		fetch('http://127.0.0.1:5000/api/modify', {
+  		method: 'POST',
+  		headers: {'Content-Type': 'application/json',},
+  		body: JSON.stringify(data),
+		}).then(tabelleAktualisieren());
+ 	}
+
+ 	function loeschen(number){
+ 		const data = { ID: number };
+ 		fetch('http://127.0.0.1:5000/api/delete', {
+  		method: 'DELETE',
+  		headers: {'Content-Type': 'application/json',},
+  		body: JSON.stringify(data),
+		}).then(tabelleAktualisieren());
+ 	}
+
+ 	function erstellen(){
+ 		const data = { Aufgabe: document.getElementById("Aufgabe").value };
+ 		fetch('http://127.0.0.1:5000/api/create', {
+  		method: 'POST', 
+  		headers: {'Content-Type': 'application/json',},
+  		body: JSON.stringify(data),
+		}).then(()=>{
+			tabelleAktualisieren();
+			document.getElementById("Aufgabe").value = ''
+		});
+ 	}
+
+ </script>
+</html>
