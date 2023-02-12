@@ -121,7 +121,7 @@ nohup ruby projekt.rb &
 
 Da man den Port des Projekts kennt, kann man ein dauerhaft laufendes Programm mit kill 'lsof -t -i:9001' beenden. Hierbei ist 9001 die Portnummer auf der das Projekt läuft.   
 ## Daten auf den Server kopieren
-- folgt bei nächster Gelegenheit
+Eine detaillierte Anleitung hierzu folgt bei Gelegenheit - bitte schickt mir eine Email, falls es da akuten Bedarf gibt!
 ### Troubleshooting - auf ein Schülerprojekt kann nicht zugegriffen werden
 Hat man alles eingerichtet und das Projekt ist einfach nicht online sollte man wie folgt vorgehen:
 * Subdomain einstellungen prüfen
