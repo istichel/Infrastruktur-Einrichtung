@@ -133,7 +133,7 @@ Zum Kopieren von Daten, öffnet man CyberDuck => Neue Verbindung => im Dropdown 
 
 Hinweise: Jeder SFTP Nutzer hat sein eigenes Verzeichnis in /home/sftpNutzer - man kann also mehrere SFTP Nutzer haben.
 
-## Webseite onlinestellen
+## Webseite online stellen
 Zunächst erstellt man einen neuen SFTP Nutzer, z.B. user. Anschließend verbindet man sich mit Cyberduck über SFTP mit dem Server und erstellt im Verzeichnis des SFTP Nutzers ein neues Verzeichnis mit dem Namen homepage. Dort kopiert man die index.html Datei rein.
 
 Anschließend erstellt man eine neue Subdomain, über die die Homepage erreicht werden soll im Verwaltungsbereich des Hostinganbieters.
