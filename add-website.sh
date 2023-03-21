@@ -11,7 +11,7 @@ echo "server_name $subdomain;" >> /etc/nginx/sites-enabled/$subdomain;
 echo "root /var/www/html;" >> /etc/nginx/sites-enabled/$subdomain;
 echo "index index.html index.htm index.nginx-debian.html;" >> /etc/nginx/sites-enabled/$subdomain;
 echo "location / {" >> /etc/nginx/sites-enabled/$subdomain;
-echo "try_files $uri $uri/ =404;" >> /etc/nginx/sites-enabled/$subdomain;
+echo "try_files \$uri \$uri/ =404;" >> /etc/nginx/sites-enabled/$subdomain;
 echo "}" >> /etc/nginx/sites-enabled/$subdomain;
 echo "}" >> /etc/nginx/sites-enabled/$subdomain;
 sudo certbot --nginx -d $subdomain;
