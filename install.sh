@@ -33,6 +33,8 @@ echo "ChrootDirectory /home" >> /etc/ssh/sshd_config;
 echo "X11Forwarding no" >> /etc/ssh/sshd_config;
 echo "AllowTcpForwarding no" >> /etc/ssh/sshd_config;
 echo "ForceCommand internal-sftp" >> /etc/ssh/sshd_config;
+gpasswd -a www-data root;
+chmod -R g+x /root;
 systemctl restart ssh;
 sudo addgroup sftp;
 sudo shutdown -r now;
