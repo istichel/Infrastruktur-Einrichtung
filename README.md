@@ -124,7 +124,26 @@ nohup ruby projekt.rb &
 
 Da man den Port des Projekts kennt, kann man ein dauerhaft laufendes Programm mit kill 'lsof -t -i:9001' beenden. Hierbei ist 9001 die Portnummer auf der das Projekt läuft.   
 ## Daten auf den Server kopieren
-Eine detaillierte Anleitung hierzu folgt bei Gelegenheit - bitte schickt mir eine Email, falls es da akuten Bedarf gibt!
+Das Kopieren der Daten auf den Server erfolgt über SFTP. SFTP ist ein weit verbreitetes Protokoll. Zunächst muss auf dem Server ein SFTP Nutzer mit Kennwort angelegt werden. Dazu führt man folgenden Befehl aus:
+
+cd; cd Infrastruktur-Einrichtung; git pull; cd; bash Infrastruktur-Einrichtung/sftp-new-user.sh.sh
+
+Anschließend installiert man sich auf seinem Computer einen FTP Client - z.B. Cyberduck (https://cyberduck.io/)
+Zum Kopieren von Daten, öffnet man CyberDuck => Neue Verbindung => im Dropdown von FTP auf SFTP wechseln => bei Server die Domain von dem Server eintragen => bei Benutzername den Benutzernamen des gerade angelegten SFTP Nutzers und bei Passwort das zugehörige Passwort.
+
+Hinweise: Jeder SFTP Nutzer hat sein eigenes Verzeichnis in /home/sftpNutzer - man kann also mehrere SFTP Nutzer haben.
+
+## Webseite onlinestellen
+Zunächst erstellt man einen neuen SFTP Nutzer, z.B. user. Anschließend verbindet man sich mit Cyberduck über SFTP mit dem Server und erstellt im Verzeichnis des SFTP Nutzers ein neues Verzeichnis mit dem Namen homepage. Dort kopiert man die index.html Datei rein.
+
+Anschließend erstellt man eine neue Subdomain, über die die Homepage erreicht werden soll im Verwaltungsbereich des Hostinganbieters.
+Der Befehl
+
+cd; cd Infrastruktur-Einrichtung; git pull; cd; bash Infrastruktur-Einrichtung/add-website.sh
+
+nimmt dann alle notwendigen Einstellungen am Server vor, so dass die Seite direkt online erreichbar ist.
+Als Pfad sollte man in diesem Beispiel /home/user/homepage angeben. Denn: Der SFTP Nutzer "user" hat sein eigenes Home-Verzeichnis /home/user und wir haben in diesem Verzeichnis mit Cyberduck ein Unterverzeichnis homepage angelegt und dort die index.html Datei reinkopiert.
+
 ### Troubleshooting - auf ein Schülerprojekt kann nicht zugegriffen werden
 Hat man alles eingerichtet und das Projekt ist einfach nicht online sollte man wie folgt vorgehen:
 * Subdomain einstellungen prüfen
