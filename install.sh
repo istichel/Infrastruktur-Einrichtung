@@ -37,4 +37,5 @@ gpasswd -a www-data root;
 chmod -R g+x /root;
 systemctl restart ssh;
 sudo addgroup sftp;
+gpasswd -a www-data sftp;
 sudo shutdown -r now;
