@@ -7,6 +7,5 @@ echo "****** ACHTUNG *******"
 echo "**********************"
 echo "Gleich muss das Kennwort für den angelegten Benutzer festgelegt werden...gut merken!"
 sudo passwd $sftpuser;
-gpasswd -a www-data $sftpuser;
 chmod -R g+x /home/$sftpuser;
 sudo chmod 700 /home/$sftpuser/
