@@ -18,6 +18,7 @@ sudo apt install -y net-tools;
 sudo apt install -y docker.io;
 sudo apt install -y nodejs;
 pip install flask;
+pip install bottle;
 git clone https://github.com/istichel/Infrastruktur-Einrichtung.git;
 cd Infrastruktur-Einrichtung; 
 git pull;
