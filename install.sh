@@ -18,7 +18,7 @@ sudo apt install -y net-tools;
 sudo apt install -y docker.io;
 sudo apt install -y nodejs;
 sudo apt install -y build-essential libmysqlclient-dev ruby-dev;
-gem install mysql2;
+gem install ruby-mysql;
 pip install flask;
 pip install bottle;
 pip install mysql;
