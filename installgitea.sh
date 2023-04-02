@@ -14,7 +14,7 @@ systemctl start nginx;
 sudo apt -y update;
 sudo apt -y upgrade;
 sudo apt install -y sqlite;
-wget -O gitea https://dl.gitea.io/gitea/1.17.1/gitea-1.17.1-linux-amd64
+wget -O gitea https://dl.gitea.io/gitea/1.19.0/gitea-1.19.0-linux-amd64
 chmod +x gitea;
 adduser --system --shell /bin/bash --gecos 'Git Version Control' --group --disabled-password --home /home/git git;
 mkdir -p /var/lib/gitea/{custom,data,log};
