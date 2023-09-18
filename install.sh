@@ -4,7 +4,7 @@ sudo apt update -y;
 sudo apt install -y needrestart;
 sed -i s/"#\$nrconf{restart} = 'i';"/"\$nrconf{restart} = 'a';"/g /etc/needrestart/needrestart.conf;
 sed -i s/"#\$nrconf{kernelhints} = -1;"/"\$nrconf{kernelhints} = 0;"/g /etc/needrestart/needrestart.conf;
-sudo apt upgrade -y;
+#sudo apt upgrade -y;
 sudo apt install -y git;
 sudo apt install -y nginx;
 sudo apt install -y python3;
