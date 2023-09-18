@@ -12,7 +12,7 @@ sudo certbot --nginx -d $subdomain;
 pkill nginx;
 systemctl start nginx;
 sudo apt -y update;
-sudo apt -y upgrade;
+#sudo apt -y upgrade;
 sudo apt install -y sqlite;
 wget -O gitea https://dl.gitea.io/gitea/1.19.0/gitea-1.19.0-linux-amd64
 chmod +x gitea;
